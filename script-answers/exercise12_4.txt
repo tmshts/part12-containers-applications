@@ -1,0 +1,69 @@
+Script started on Fri Sep 20 12:31:40 2024
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Tomass-MacBook-Pro.local/Users/tomashatas/D/Programming/part12-containers-applications[0m[27m[24m[Jtomashatas@Tomass-MacBook-Pro part12-containers-applications % [K[?2004hddocker start -i g [Krreat_northcutt[?2004l
+[?2004h]0;root@3220235de172: /root@3220235de172:/# apt-get -y install curl
+[?2004lReading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 7%Reading package lists... 7%Reading package lists... 84%Reading package lists... 84%Reading package lists... 85%Reading package lists... 85%Reading package lists... 86%Reading package lists... 86%Reading package lists... 89%Reading package lists... 89%Reading package lists... 91%Reading package lists... 91%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 95%Reading package lists... 95%Reading package lists... 97%Reading package lists... 97%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 1%Reading state information... Done
+curl is already the newest version (8.5.0-2ubuntu10.4).
+The following packages were automatically installed and are no longer required:
+  libcares2 libicu74 libuv1t64 node-busboy node-cjs-module-lexer node-undici
+  node-xtend
+Use 'apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+[?2004h]0;root@3220235de172: /root@3220235de172:/# [7mcurl -sL https://deb.nodesource.com/setup_20.x | bash[27m
+[Aroot@3220235de172:/# curl -sL https://deb.nodesource.com/setup_20.x | bash
+[A
+[?2004l[38;5;79m2024-09-20 12:32:24 - Installing pre-requisites[0m
+0% [Working]            Hit:1 https://deb.nodesource.com/node_20.x nodistro InRelease
+0% [Waiting for headers]0% [Waiting for headers]                        Hit:2 http://ports.ubuntu.com/ubuntu-ports noble InRelease
+                        0% [Working]0% [Waiting for headers]                        Hit:3 http://ports.ubuntu.com/ubuntu-ports noble-updates InRelease
+                        0% [Working]0% [Waiting for headers]                        Hit:4 http://ports.ubuntu.com/ubuntu-ports noble-backports InRelease
+                        0% [Working]0% [Waiting for headers]                        Hit:5 http://ports.ubuntu.com/ubuntu-ports noble-security InRelease
+                        0% [Working]20% [Working]             Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 7%Reading package lists... 7%Reading package lists... 84%Reading package lists... 84%Reading package lists... 85%Reading package lists... 85%Reading package lists... 86%Reading package lists... 86%Reading package lists... 89%Reading package lists... 89%Reading package lists... 91%Reading package lists... 91%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 95%Reading package lists... 95%Reading package lists... 97%Reading package lists... 97%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 7%Reading package lists... 7%Reading package lists... 84%Reading package lists... 84%Reading package lists... 85%Reading package lists... 85%Reading package lists... 86%Reading package lists... 86%Reading package lists... 89%Reading package lists... 89%Reading package lists... 91%Reading package lists... 91%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 95%Reading package lists... 95%Reading package lists... 97%Reading package lists... 97%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 1%Reading state information... Done
+apt-transport-https is already the newest version (2.7.14build2).
+ca-certificates is already the newest version (20240203).
+curl is already the newest version (8.5.0-2ubuntu10.4).
+gnupg is already the newest version (2.4.4-2ubuntu17).
+The following packages were automatically installed and are no longer required:
+  libcares2 libicu74 libuv1t64 node-busboy node-cjs-module-lexer node-undici
+  node-xtend
+Use 'apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+0% [Working]            Hit:1 http://ports.ubuntu.com/ubuntu-ports noble InRelease
+0% [Waiting for headers] [Connecting to ports.ubuntu.com (185.125.190.39)]                                                                          Hit:2 https://deb.nodesource.com/node_20.x nodistro InRelease
+                                                                          0% [Waiting for headers]0% [Waiting for headers]                        Hit:3 http://ports.ubuntu.com/ubuntu-ports noble-updates InRelease
+                        0% [Working]0% [Waiting for headers]0% [Waiting for headers]                        Hit:4 http://ports.ubuntu.com/ubuntu-ports noble-backports InRelease
+                        0% [Working]0% [Waiting for headers]                        Hit:5 http://ports.ubuntu.com/ubuntu-ports noble-security InRelease
+                        0% [Working]20% [Working]             Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 7%Reading package lists... 7%Reading package lists... 84%Reading package lists... 84%Reading package lists... 85%Reading package lists... 85%Reading package lists... 86%Reading package lists... 86%Reading package lists... 89%Reading package lists... 89%Reading package lists... 91%Reading package lists... 91%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 95%Reading package lists... 95%Reading package lists... 97%Reading package lists... 97%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+[1;34m2024-09-20 12:32:28 - Repository configured successfully.[0m
+[38;5;79m2024-09-20 12:32:28 - To install Node.js, run: apt-get install nodejs -y[0m
+[38;5;79m2024-09-20 12:32:28 - You can use N|solid Runtime as a node.js alternative[0m
+[1;32m2024-09-20 12:32:28 - To install N|solid Runtime, run: apt-get install nsolid -y 
+[0m
+[?2004h]0;root@3220235de172: /root@3220235de172:/# [K[7mapt install -y nodejs[27mapt install -y nodejs
+[?2004lReading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 7%Reading package lists... 7%Reading package lists... 84%Reading package lists... 84%Reading package lists... 85%Reading package lists... 85%Reading package lists... 86%Reading package lists... 86%Reading package lists... 89%Reading package lists... 89%Reading package lists... 91%Reading package lists... 91%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 95%Reading package lists... 95%Reading package lists... 97%Reading package lists... 97%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 1%Reading state information... Done
+nodejs is already the newest version (20.17.0-1nodesource1).
+The following packages were automatically installed and are no longer required:
+  libcares2 libicu74 libuv1t64 node-busboy node-cjs-module-lexer node-undici
+  node-xtend
+Use 'apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+[?2004h]0;root@3220235de172: /root@3220235de172:/# [7mnode /usr/src/app/index.js[27m
+[Aroot@3220235de172:/# node /usr/src/app/index.js
+[A
+[?2004lHello World
+[?2004h]0;root@3220235de172: /root@3220235de172:/# [Kexit
+[?2004lexit
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Tomass-MacBook-Pro.local/Users/tomashatas/D/Programming/part12-containers-applications[0m[27m[24m[Jtomashatas@Tomass-MacBook-Pro part12-containers-applications % [K[?2004heexit[?2004l
+
+Saving session...
+...copying shared history...
+...saving history...truncating history files...
+...completed.
+
+Script done on Fri Sep 20 12:32:56 2024
