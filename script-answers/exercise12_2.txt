@@ -1,13 +1,8 @@
-Script started on Fri Sep 20 11:27:36 2024
-[1m[7m%[27m[1m[0m                                                                                ]7;file://Tomass-MacBook-Pro.local/Users/tomashatas/d/Programming/part12-containers-applications[0m[27m[24m[Jtomashatas@Tomass-MacBook-Pro part12-containers-applications % [K[?2004h[7mdocker run -it ub[7mu[7mntu bash[27m[K[A[54C[27md[27mo[27mc[27mk[27me[27mr[27m [27mr[27mu[27mn[27m [27m-[27mi[27mt[27m [27mu[27mbu[27mn[27mt[27mu[27m [27mb[27ma[27ms[27mh[?2004l
-[?2004h]0;root@3220235de172: /root@3220235de172:/# mkdir [7m/usr/src/app[27m/usr/src/app
-[?2004l[?2004h]0;root@3220235de172: /root@3220235de172:/# touch [7m/usr/src/app/index.js[27m/usr/src/app/index.js
-[?2004l[?2004h]0;root@3220235de172: /root@3220235de172:/# [Kexit
+Script started on Mon Sep 30 12:34:39 2024
+Restored session: Mon Sep 30 12:33:46 CEST 2024
+[1m[7m%[27m[1m[0m                                                                                ]7;file://faustud-010-021-037-224.pool.uni-erlangen.de/Users/tomashatas/D/Programming/part12-containers-applications[0m[27m[24m[Jtomashatas@faustud-010-021-037-224 part12-containers-applications % [K[?2004h[7mdocker conta[7mi[7mner run -it ubuntu bash[27m[K[A[44C[27md[27mo[27mc[27mk[27me[27mr[27m [27mc[27mo[27mn[27mt[27mai[27mn[27me[27mr[27m [27mr[27mu[27mn[27m [27m-[27mi[27mt[27m [27mu[27mb[27mu[27mn[27mt[27mu[27m [27mb[27ma[27ms[27mh[?2004l
+[?2004h]0;root@2a1c19f16bed: /root@2a1c19f16bed:/# mkdir /usr/src/app/ 
+[?2004l[?2004h]0;root@2a1c19f16bed: /root@2a1c19f16bed:/# touch /usr/src/app/index.js
+[?2004l[?2004h]0;root@2a1c19f16bed: /root@2a1c19f16bed:/# [Kexit
 [?2004lexit
-[1m[7m%[27m[1m[0m                                                                                ]7;file://Tomass-MacBook-Pro.local/Users/tomashatas/d/Programming/part12-containers-applications[0m[27m[24m[Jtomashatas@Tomass-MacBook-Pro part12-containers-applications % [K[?2004heexit[?2004l
-
-Saving session...
-...saving history...truncating history files...
-...completed.
-
-Script done on Fri Sep 20 11:29:36 2024
+[1m[7m%[27m[1m[0m                                                                                ]7;file://faustud-010-021-037-224.pool.uni-erlangen.de/Users/tomashatas/D/Programming/part12-containers-applications[0m[27m[24m[Jtomashatas@faustud-010-021-037-224 part12-containers-applications % [K[?2004h
