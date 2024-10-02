@@ -1,18 +1,24 @@
 services:
   mongo:
+    # when I created image from Dockerfile with instructions including COPY
+    # a not pulling image mongo from Docker Hub
+    # image: initialized-mongo
     image: mongo
     ports:
       - 3456:27017
     environment:
+      # create a new user and set the user's password
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
+      # tells MongoDB to create a database with the name
       MONGO_INITDB_DATABASE: the_database
-    volumes: 
+    volumes:
+      # bind mount - binding mongo-init.js file into container
       - ./mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js
       ### TO STORE DATA
-      # option bind mount
-      #- ./mongo_data:/data/db
-      # option volume
-      - mongo_data:/data/db
+      # option 1 bind mount
+      - ./mongo_data:/data/db
+### TO STORE DATA
+# option 2 volume
 volumes:
   mongo_data:

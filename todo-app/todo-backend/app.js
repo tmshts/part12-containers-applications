@@ -2,6 +2,8 @@ const express = require('express');
 const logger = require('morgan');
 const cors = require('cors');
 
+require('dotenv').config()
+
 const indexRouter = require('./routes/index');
 const todosRouter = require('./routes/todos');
 
@@ -14,5 +16,7 @@ app.use(express.json());
 
 app.use('/', indexRouter);
 app.use('/todos', todosRouter);
+
+//console.log(process.env.MONGO_URL)
 
 module.exports = app;
