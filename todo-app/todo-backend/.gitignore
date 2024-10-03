@@ -62,3 +62,4 @@ typings/
 
 # Added by me
 mongo_data/
+redis_data/

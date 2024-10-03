@@ -21,10 +21,17 @@ router.get('/', async (req, res) => {
 /* GET statistics. */
 router.get('/statistics', async (_, res) => {
   const result = await redis.getAsync("added_todos")
-  const json_format = {
-    "added_todos": result
+  if(result === null) {
+      res.send(json_format = {
+        "added_todos": 0
+      })
   }
-  res.send(json_format);
+  else {
+    res.send(json_format = {
+        "added_todos": result
+    })
+  }
+  //res.send(json_format);
 });
 
 module.exports = router;
