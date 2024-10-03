@@ -3,6 +3,9 @@ const router = express.Router();
 
 const configs = require('../util/config')
 
+// test confirguration for Redis
+const redis = require('../redis')
+
 let visits = 0
 
 /* GET index data. */
@@ -13,6 +16,15 @@ router.get('/', async (req, res) => {
     ...configs,
     visits
   });
+});
+
+/* GET statistics. */
+router.get('/statistics', async (_, res) => {
+  const result = await redis.getAsync("added_todos")
+  const json_format = {
+    "added_todos": result
+  }
+  res.send(json_format);
 });
 
 module.exports = router;

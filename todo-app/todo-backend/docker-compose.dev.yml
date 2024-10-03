@@ -20,5 +20,12 @@ services:
       - ./mongo_data:/data/db
 ### TO STORE DATA
 # option 2 volume
-volumes:
-  mongo_data:
+#volumes:
+#  mongo_data:
+
+  redis:
+    #image: redis:6.2-alpine
+    image: redis:7.4
+    #restart: always
+    ports:
+      - 6379:6379
