@@ -1,6 +1,7 @@
 services:
   app:
-    image: hello-front-dev
+    container_name: front_container_dev
+    image: todo-front-dev
     build:
       # The context will pick this directory as the "build context"
       context: .
@@ -10,6 +11,9 @@ services:
       # The path can be relative, so ./ is enough to say "the same location as the docker-compose.yml"
       - ./:/usr/src/app
     ports:
-      - 5173:5173
+      # 3210 access outside container
+      # 5173 access inside container
+      - 3210:5173
       # This will name the container hello-front-dev
-    container_name: hello-front-dev
+  #debug-helper:
+  #  image: busybox
