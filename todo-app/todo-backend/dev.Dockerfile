@@ -8,7 +8,6 @@ COPY --chown=node:node . .
 # Change npm ci to npm install since we are going to be in development mode
 RUN npm install
 
-# CMD DEBUG=play:* npm start
 ENV DEBUG=todo-backend:*
 
 USER node
