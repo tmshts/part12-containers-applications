@@ -18,6 +18,9 @@ COPY --from=testing-stage /usr/src/app .
 
 # RUN npm ci
 
+# uncomment below line in production mode
+ENV VITE_BACKEND_URL="http://localhost:8080/api"
+
 RUN npm run build
 
 # This is a new stage, everything before this is gone,
