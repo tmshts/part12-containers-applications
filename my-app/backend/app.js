@@ -23,10 +23,11 @@ const mongoose = require('mongoose')
 const mongoUrl = config.MONGODB_URI
 logger.info('connecting to', mongoUrl)
 
-app.use('/api/projects', projectsRouter)
-app.use('/api/jobs', jobsRouter)
-app.use('/api/education', educationRouter)
 app.use(cors())
+
+app.use('/projects', projectsRouter)
+app.use('/jobs', jobsRouter)
+app.use('/education', educationRouter)
 
 /*
 //////

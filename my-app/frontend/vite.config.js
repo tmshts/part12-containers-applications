@@ -7,7 +7,15 @@ export default defineConfig({
 
   server: {
     proxy: {
-      '/api': {
+      '/projects': {
+        target: 'http://localhost:3000',
+        changeOrigin: true,
+      },
+      '/jobs': {
+        target: 'http://localhost:3000',
+        changeOrigin: true,
+      },
+      '/education': {
         target: 'http://localhost:3000',
         changeOrigin: true,
       },
