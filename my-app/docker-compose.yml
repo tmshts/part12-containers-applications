@@ -1,0 +1,89 @@
+services:
+
+  app:
+    container_name: front_container_production
+    image: front-production
+    build:
+      # The context will pick this directory as the "build context"
+      context: ./frontend
+      # This will simply tell which dockerfile to read
+      dockerfile: Dockerfile
+    volumes:
+      # The path can be relative, so ./ is enough to say "the same location as the docker-compose.yml"
+      - ./frontend/:/usr/src/app
+    # no exposed port necessary
+    #ports:
+      # 3210 access outside container
+      # 3000 access inside container
+    # - 3210:5173
+    # not necessary in production mode since it is put in Dockerfile in front-end before building mini-version of frontend
+    #environment:
+    # - VITE_BACKEND_URL=http://localhost:8080/api/
+    # - VITE_BACKEND_URL=/api/
+  
+  #debug-helper:
+  #  image: busybox
+
+  mongo:
+    # when I created image from Dockerfile with instructions including COPY
+    # a not pulling image mongo from Docker Hub
+    # image: initialized-mongo
+    container_name: mongo_container
+    image: mongo
+    ports:
+      - 3456:27017
+    environment:
+      # create a new user and set the user's password
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+      # tells MongoDB to create a database with the name
+      MONGO_INITDB_DATABASE: the_database
+    volumes:
+      # bind mount - binding mongo-init.js file into container
+      - ./backend/models/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js
+      ### TO STORE DATA
+      # option 1 bind mount
+      - ./backend/mongo_data:/data/db
+### TO STORE DATA
+# option 2 volume
+#volumes:
+#  mongo_data:
+
+  server:
+    container_name: backend_container_production
+    image: backend-production
+    # Declares where to build if image is not found
+    build:
+      # The context will pick this directory as the "build context"
+      context: ./backend
+      # This will simply tell which dockerfile to read
+      dockerfile: Dockerfile
+    volumes:
+      # The path can be relative, so ./ is enough to say "the same location as the docker-compose.yml"
+      - ./backend/:/usr/src/app
+    # no exposed port necessary
+    #ports:
+      # first port - out of docker
+      # second port - inside docker
+     # - 3000:3000
+    environment:
+      # check PORTs
+      - MONGODB_URI=mongodb://the_username:the_password@mongo:27017/the_database
+
+
+  nginx:
+    image: nginx:1.20.1
+    volumes:
+      # ro declares that the volume will be read-only
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - 8080:80
+    container_name: reverse-proxy
+    depends_on:
+      # wait for the frontend container to be started
+      # but not garantee that service is ready for action
+      - app
+      - server
+  # if service needs to wait another service to become ready before startup
+  # app:
+    # condition: service_started
